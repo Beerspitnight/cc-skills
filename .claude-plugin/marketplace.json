@@ -1,0 +1,30 @@
+{
+  "name": "bruno-skills",
+  "owner": {
+    "name": "Bruno",
+    "email": "beerspitnight@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "pitch-deck-creator-edtech",
+      "source": "./plugins/pitch-deck-creator-edtech",
+      "description": "Transform raw text content into visually compelling, investor-ready pitch decks. Guides founders through narrative refinement, wireframing, and PowerPoint/Google Slides generation.",
+      "version": "1.1.0",
+      "category": "productivity",
+      "tags": ["business", "presentation", "edtech", "design"],
+      "author": {
+        "name": "Bruno"
+      }
+    {
+      "name": "graphic-design-expert",
+      "source": "./plugins/graphic-design-expert",
+      "description": "Uses design principals to create stunning images or gives suggestions on typography, color palettes, and layout.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["design", "business", "graphic design", "sales-sheet"],
+      "author": {
+        "name": "Bruno"
+      }  
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "pitch-deck-creator-edtech",
+  "version": "1.1.0",
+  "description": "Transform raw text content into visually compelling, investor-ready pitch decks for EdTech startups.",
+  "author": {
+    "name": "Bruno",
+    "email": "beerspitnight@gmail.com"
+  },
+  "agents": [
+    "skill.md"
+  ],
+  "license": "MIT"
+}
