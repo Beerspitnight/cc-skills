@@ -17,8 +17,7 @@ Once the marketplace is added, you can browse and install individual plugins usi
 | Plugin Name | Version | Description |
 | :--- | :--- | :--- |
 | **Pitch Deck Creator Edtech** | `1.1.0` | specialized agent that transforms raw text into investor-ready PowerPoint & Google Slides presentations. Includes wireframing and narrative refinement. |
-| *(More coming soon)* | | |
-
+|| **Graphic Design Expert** | `1.0.0` | Uses design principles to create stunning images or gives suggestions on typography, color palettes, and layout. |
 ## 🛠️ Plugin Details
 
 ### Pitch Deck Creator Edtech (EdTech Focus)
@@ -45,10 +44,10 @@ beerspitnight/cc-skills/
 ├── .claude-plugin/
 │   └── marketplace.json               # The Marketplace Catalog definition
 ├── plugins/
-│   └── pitch-deck-creator-edtech/     # Source code for the Pitch Deck tool
+│   ├── pitch-deck-creator-edtech/     # Source code for the Pitch Deck tool
+│   └── graphic-design-expert/         # Source code for the Graphic Design tool
 │       ├── plugin.json                # Plugin Manifest
-│       ├── skill.md                   # Agent Logic & Prompts
-│       └── resources/                 # Assets and Templates
+│       └── skill.md                   # Agent Logic & Prompts
 └── README.md                          # You are here
 ```
 
