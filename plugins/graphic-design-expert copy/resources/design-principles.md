@@ -24,6 +24,18 @@
 - **Brand Color Expansion:** Define tints, shades, and semantic colors.
 - **Dark/Light Mode Parity:** Colors should remain consistent across themes.
 
+### Emotional Resonance (Psychology)
+- **Red:** Urgency, passion, food/retail (CTAs, Sales).
+- **Blue:** Trust, security, corporate, finance.
+- **Green:** Growth, health, money, eco-friendly.
+- **Yellow:** Optimism, caution, highlights.
+- **Purple:** Luxury, wisdom, creative, spiritual.
+- **Black:** Sophistication, luxury, editorial.
+
+### Accessibility
+- **WCAG AA:** 4.5:1 ratio for normal text.
+- **WCAG AAA:** 7:1 ratio for normal text.
+
 ## 3. Layout & Hierarchy
 - **CRAP Principle:**
   - **Contrast:** Make differences bold and intentional.
@@ -31,7 +43,7 @@
   - **Alignment:** Every element should visually relate to another.
   - **Proximity:** Group related items; separate unrelated ones.
 - **Whitespace:** Use whitespace as an active design tool.
-- **Grid Systems:** Baseline grids, 8pt/4pt spacing systems.
+- **Grid Systems:** Use 8pt/4pt grids for digital; 12-column grids for web layouts.
 - **Golden Ratio / Rule of Thirds:** Use for balanced composition.
 - **Hierarchy Maps:** Define permissible levels of text hierarchy.
 - **Visual Flow:** Choose F-pattern, Z-pattern, or narrative flow as appropriate.
@@ -79,4 +91,13 @@
 - **RTL Logic:** Support right-to-left layouts.
 - **Localization Expansion:** Plan for text that expands 30–50%.
 - **Cultural Iconography:** Ensure symbols translate globally.
+
+## 10. Technical Format Guide
+| Format | Type | Best For | Transparency? |
+|--------|------|----------|---------------|
+| **JPG** | Raster | Photos, complex gradients | No |
+| **PNG** | Raster | UI elements, screenshots | Yes |
+| **WebP** | Raster | Modern web delivery (highly compressed) | Yes |
+| **SVG** | Vector | Icons, logos, illustrations | Yes |
+| **PDF** | Vector | Print documents, sharing | Yes |
 

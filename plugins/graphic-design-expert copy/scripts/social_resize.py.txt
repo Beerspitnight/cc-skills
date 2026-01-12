@@ -1,0 +1,46 @@
+import sys
+import os
+from PIL import Image, ImageOps
+
+# Standard dimensions from references/social-media-specs.md
+PLATFORMS = {
+    "insta_portrait": (1080, 1350),
+    "insta_square": (1080, 1080),
+    "insta_story": (1080, 1920),
+    "linkedin_portrait": (1080, 1350),
+    "linkedin_cover": (1920, 1080),
+    "youtube_thumb": (1280, 720),
+    "twitter_stream": (1600, 900)
+}
+
+def resize_image(image_path, target_key):
+    if target_key not in PLATFORMS:
+        print(f"Error: Format '{target_key}' not found. Available: {list(PLATFORMS.keys())}")
+        return
+
+    target_size = PLATFORMS[target_key]
+    
+    try:
+        with Image.open(image_path) as img:
+            # Convert to RGB if necessary (e.g. for PNGs with transparency)
+            if img.mode in ('RGBA', 'P'):
+                img = img.convert('RGB')
+                
+            # Fit and Center Crop
+            result = ImageOps.fit(img, target_size, centering=(0.5, 0.5))
+            
+            # Save
+            filename, ext = os.path.splitext(image_path)
+            output_path = f"{filename}_{target_key}.jpg"
+            result.save(output_path, quality=90, optimize=True)
+            print(f"Success: Created {output_path} ({target_size[0]}x{target_size[1]})")
+            
+    except Exception as e:
+        print(f"Error processing image: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python social_resize.py <image_path> <platform_key>")
+        print("Keys:", ", ".join(PLATFORMS.keys()))
+    else:
+        resize_image(sys.argv[1], sys.argv[2])

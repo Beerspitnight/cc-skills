@@ -1,0 +1,13 @@
+{
+  "name": "graphic-design-expert",
+  "version": "1.0.0",
+  "description": "Uses design principles to create stunning images or give suggestions on typography, color palettes, and layout.",
+  "author": {
+    "name": "Bruno",
+    "email": "beerspitnight@gmail.com"
+  },
+  "agents": [
+    "skill.md"
+  ],
+  "license": "MIT"
+}

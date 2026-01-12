@@ -1,0 +1,13 @@
+{
+  "name": "frontend-designer",
+  "version": "1.0.0",
+  "description": "Uses design principles to create stunning webpages.",
+  "author": {
+    "name": "Bruno",
+    "email": "beerspitnight@gmail.com"
+  },
+  "agents": [
+    "skill.md"
+  ],
+  "license": "MIT"
+}
