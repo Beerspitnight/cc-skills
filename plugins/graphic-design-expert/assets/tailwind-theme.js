@@ -1,7 +1,3 @@
-
-
-```javascript
-// Default config for consistency
 module.exports = {
   theme: {
     extend: {
@@ -14,10 +10,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        serif: ['Canela', 'serif'],
       },
       spacing: {
-        '128': '32rem', // for large layouts
+        '128': '32rem',
       }
     }
   }

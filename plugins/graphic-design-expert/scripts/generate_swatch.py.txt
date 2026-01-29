@@ -1,0 +1,25 @@
+import sys
+from PIL import Image, ImageDraw
+
+def create_swatch(colors, filename="palette.png"):
+    # colors input format: "#FF5733,#33FF57"
+    hex_list = colors.split(',')
+    width = len(hex_list) * 200
+    height = 300
+    
+    img = Image.new('RGB', (width, height), color='white')
+    draw = ImageDraw.Draw(img)
+    
+    for i, hex_code in enumerate(hex_list):
+        hex_code = hex_code.strip()
+        draw.rectangle([i*200, 0, (i+1)*200, 250], fill=hex_code)
+        print(f"Swatch {i+1}: {hex_code}")
+
+    img.save(filename)
+    print(f"Generated {filename}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python generate_swatch.py '#HEX1,#HEX2'")
+    else:
+        create_swatch(sys.argv[1])

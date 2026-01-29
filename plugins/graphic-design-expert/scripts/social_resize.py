@@ -22,14 +22,11 @@ def resize_image(image_path, target_key):
     
     try:
         with Image.open(image_path) as img:
-            # Convert to RGB if necessary (e.g. for PNGs with transparency)
             if img.mode in ('RGBA', 'P'):
                 img = img.convert('RGB')
                 
-            # Fit and Center Crop
             result = ImageOps.fit(img, target_size, centering=(0.5, 0.5))
             
-            # Save
             filename, ext = os.path.splitext(image_path)
             output_path = f"{filename}_{target_key}.jpg"
             result.save(output_path, quality=90, optimize=True)
@@ -41,6 +38,5 @@ def resize_image(image_path, target_key):
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Usage: python social_resize.py <image_path> <platform_key>")
-        print("Keys:", ", ".join(PLATFORMS.keys()))
     else:
         resize_image(sys.argv[1], sys.argv[2])

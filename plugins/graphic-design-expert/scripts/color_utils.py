@@ -18,17 +18,24 @@ def contrast_ratio(hex1, hex2):
     return (bright + 0.05) / (dark + 0.05)
 
 def generate_palette(base_hex):
-    # This is a simplified generator for the example
-    # In production, you might generate tints/shades here
-    r, g, b = hex_to_rgb(base_hex)
-    h, l, s = colorsys.rgb_to_hls(r/255, g/255, b/255)
-    
-    # Generate a complementary color
-    comp_h = (h + 0.5) % 1.0
-    comp_r, comp_g, comp_b = colorsys.hls_to_rgb(comp_h, l, s)
-    comp_hex = '#{:02x}{:02x}{:02x}'.format(int(comp_r*255), int(comp_g*255), int(comp_b*255))
-    
-    return f"Base: {base_hex}\nComplementary: {comp_hex}\nContrast against White: {contrast_ratio(base_hex, '#FFFFFF'):.2f}:1"
+    try:
+        r, g, b = hex_to_rgb(base_hex)
+        h, l, s = colorsys.rgb_to_hls(r/255, g/255, b/255)
+        
+        # Generate a complementary color
+        comp_h = (h + 0.5) % 1.0
+        comp_r, comp_g, comp_b = colorsys.hls_to_rgb(comp_h, l, s)
+        comp_hex = '#{:02x}{:02x}{:02x}'.format(int(comp_r*255), int(comp_g*255), int(comp_b*255))
+        
+        ratio = contrast_ratio(base_hex, '#FFFFFF')
+        wcag = "FAIL"
+        if ratio >= 7: wcag = "AAA"
+        elif ratio >= 4.5: wcag = "AA"
+        elif ratio >= 3: wcag = "Large Text Only"
+        
+        return f"Base: {base_hex}\nComplementary: {comp_hex}\nContrast (Base vs White): {ratio:.2f}:1 ({wcag})"
+    except Exception as e:
+        return f"Error: {e}"
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
