@@ -20,12 +20,23 @@
       "name": "graphic-design-expert",
       "source": "./plugins/graphic-design-expert",
       "description": "Uses design principals to create stunning images or gives suggestions on typography, color palettes, and layout.",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "category": "productivity",
       "tags": ["design", "business", "graphic design", "sales-sheet"],
       "author": {
         "name": "Bruno"
       }  
+    },
+    { 
+      "name": "viral-reel-generator",
+      "source": "./plugins/viral-reel-generator",
+      "description": "A specialized Claude skill for engineering high-retention short-form video scripts (TikTok, Instagram Reels, YouTube Shorts).",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["design", "business", "videos", "viral"],
+      "author": {
+        "name": "Bruno"
+      }
     }
   ]
 }
