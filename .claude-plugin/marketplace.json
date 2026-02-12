@@ -37,6 +37,17 @@
       "author": {
         "name": "Bruno"
       }
+    },
+     { 
+      "name": "lausd-compliance-auditor-skill",
+      "source": "./plugins/compliance-auditor",
+      "description": "A Claude Code skill that audits SaaS codebases against the **LAUSD IT Security Compliance Manual v2.0**, which implements the **NIST Cybersecurity Framework (CSF) 2.0.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["compliance", "audit", "security", "lausd"],
+      "author": {
+        "name": "Bruno"
+      }
     }
   ]
 }
