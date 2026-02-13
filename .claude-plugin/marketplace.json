@@ -59,6 +59,17 @@
       "author": {
         "name": "Bruno"
       }
+    },
+    { 
+      "name": "new-venture-analyst",
+      "source": "./plugins/new-venture-analyst",
+      "description": "A specialized Claude skill designed for analyzing new venture opportunities, evaluating market potential, and providing strategic insights for startup founders.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["business", "startup", "market-analysis", "venture-capital"],
+      "author": {
+        "name": "Bruno"
+      }
     }
   ]
 }
