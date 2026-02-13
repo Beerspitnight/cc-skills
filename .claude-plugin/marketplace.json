@@ -48,6 +48,17 @@
       "author": {
         "name": "Bruno"
       }
+    },
+    { 
+      "name": "business-fact-checker",
+      "source": "./plugins/business-fact-checker",
+      "description": "A specialized Claude skill designed for rigorous verification of business assertions, financial metrics, valuations, and market intelligence. It moves beyond passive information retrieval to active \"due_diligence\" mode.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["business", "fact-checking", "valuation", "market-intelligence"],
+      "author": {
+        "name": "Bruno"
+      }
     }
   ]
 }
