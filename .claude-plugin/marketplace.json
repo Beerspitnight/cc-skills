@@ -38,13 +38,13 @@
         "name": "Bruno"
       }
     },
-     { 
-      "name": "lausd-compliance-auditor-skill",
-      "source": "./plugins/compliance-auditor",
-      "description": "A Claude Code skill that audits SaaS codebases against the **LAUSD IT Security Compliance Manual v2.0**, which implements the **NIST Cybersecurity Framework (CSF) 2.0.",
-      "version": "1.0.0",
+     {
+      "name": "auditing-compliance",
+      "source": "./plugins/auditing-compliance",
+      "description": "Audits codebases against IT security, privacy, and compliance frameworks including LAUSD (NIST CSF 2.0), NJ K-12 (NJDPL), and AICPA SOC 2.",
+      "version": "2.0.0",
       "category": "productivity",
-      "tags": ["compliance", "audit", "security", "lausd"],
+      "tags": ["compliance", "audit", "security", "lausd", "nj-k12", "soc2"],
       "author": {
         "name": "Bruno"
       }

@@ -1,6 +1,6 @@
-# LAUSD Compliance Auditor Skill
+# Auditing & Compliance Skill
 
-A Claude Code skill that audits SaaS codebases against the **LAUSD IT Security Compliance Manual v2.0**, which implements the **NIST Cybersecurity Framework (CSF) 2.0**.
+A Claude Code skill that audits codebases against IT security, privacy, and compliance frameworks including **LAUSD (NIST CSF 2.0)**, **NJ K-12 (NJDPL)**, and **AICPA SOC 2**.
 
 ## Overview
 
@@ -8,13 +8,13 @@ This skill performs automated compliance audits of software repositories to ensu
 
 ## Usage
 
-Invoke the skill when you need to audit a codebase for LAUSD compliance:
+Invoke the skill when you need to audit a codebase for compliance:
 
 ```
-/compliance-auditor
+/auditing-compliance
 ```
 
-Or simply ask Claude to perform a compliance audit against LAUSD standards.
+Or simply ask Claude to perform a compliance audit against LAUSD, NJ K-12, or SOC 2 standards.
 
 ## What It Checks
 
@@ -96,13 +96,18 @@ The skill generates a structured compliance report:
 ## Directory Structure
 
 ```
-compliance-auditor/
+auditing-compliance/
 ├── SKILL.md                          # Main skill definition
-├── README.md                         # This file
-├── audit-report.md                   # Output template
-└── references/
-    ├── lausd-security-manual-v2.md   # Full policy document (NIST CSF 2.0 mappings)
-    └── tech-signals.md               # Technical patterns to detect
+├── lausd-audit-instructions.md       # LAUSD audit procedures
+├── lausd-security-manual.md          # LAUSD policy document (NIST CSF 2.0 mappings)
+├── nj-audit-instructions.md          # NJ K-12 audit procedures
+├── soc2-audit-instructions.md        # SOC 2 audit procedures
+├── technical-signals.md              # Technical patterns to detect
+└── templates/
+    ├── lausd-audit-report.md         # LAUSD report template
+    ├── nj-audit-report.md            # NJ K-12 report template
+    ├── soc2-audit-report.md          # SOC 2 report template
+    └── combined-audit-report.md      # Combined framework report template
 ```
 
 ## Key Policy Documents Referenced
